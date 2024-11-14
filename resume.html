@@ -53,6 +53,17 @@
             transform: translateY(-5px); /* Button moves up */
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
         }
+
+        /* Styling for the download button */
+        .download-btn {
+            margin-top: 20px;
+            background-color: #28a745;
+        }
+
+        .download-btn:hover {
+            background-color: #218838;
+        }
+
     </style>
 </head>
 <body>
@@ -119,6 +130,11 @@
 
         <button onclick="window.location.href='index.html'">Back to Home</button>
         <button onclick="window.location.href='projects.html'">View Projects</button>
+
+        <!-- Download Button for Resume -->
+        <a href="resume.docx" class="download-btn" download>
+            <button>Download Resume</button>
+        </a>
     </section>
 
 </body>
