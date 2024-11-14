@@ -1,0 +1,174 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7f8fa;
+    color: #333;
+}
+
+/* Landing Page Styling */
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #007acc, #00a3cc);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.landing-content {
+    max-width: 700px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid white;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.tagline {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    background-color: white;
+    color: #007acc;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #007acc;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Resume Section */
+#resume {
+    background-color: #ffffff;
+    padding: 50px 30px;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#resume header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #007acc;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.resume-content section {
+    margin-bottom: 25px;
+}
+
+.resume-content h3 {
+    font-size: 1.6em;
+    color: #007acc;
+}
+
+.resume-content ul {
+    list-style: none;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+button.download-btn {
+    background-color: #007acc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+button.download-btn:hover {
+    background-color: #005c99;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #fff;
+    padding: 50px 30px;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project {
+    background: #f0faff;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project h3 {
+    color: #005c99;
+}
+
+.project a {
+    color: #007acc;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project a:hover {
+    color: #005c99;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
