@@ -1,22 +1,24 @@
-// Smooth scroll function for navigation buttons
-function goToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
+// Highlight active nav based on current page
+(function () {
+  const path = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav-link").forEach(a => {
+    const href = a.getAttribute("href");
+    if ((path === "" && href.endsWith("index.html")) || path === href) {
+      a.classList.add("active");
+    }
+  });
+})();
 
-// Function to download resume
-function downloadResume() {
-    window.location.href = "resume.pdf";  // Ensure "resume.pdf" is in the same directory
-}
-
-// Fade-in sections on scroll
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const triggerBottom = window.innerHeight * 0.8;
-
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < triggerBottom) {
-            section.classList.add('visible');
-        }
+// Simple fade-in on load for hero/panels/cards
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeTargets = document.querySelectorAll(".hero, .panel, .card");
+  fadeTargets.forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(6px)";
+    requestAnimationFrame(() => {
+      el.style.transition = "opacity .35s ease, transform .35s ease";
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
     });
+  });
 });
