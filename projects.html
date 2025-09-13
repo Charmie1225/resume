@@ -1,153 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charmentha Guillaume - Projects</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Button Styles */
-        button {
-            padding: 12px 25px;
-            font-size: 1.1em;
-            background-color: #007acc;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-
-        button:hover {
-            background-color: #005c99;
-            color: white;
-            transform: translateY(-5px); /* Button moves up */
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
-        }
-
-        /* Projects Page Styling */
-        .projects-page {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #d3e4f1; /* Light blue background for the page */
-            color: #333;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .projects-page h1 {
-            font-size: 3em;
-            font-weight: bold;
-            margin-bottom: 30px;
-            color: #007acc; /* Blue color for the heading */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-            transition: color 0.3s ease;
-        }
-
-        .projects-page h1:hover {
-            color: #005c99; /* Darker blue when hovered */
-        }
-
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .project-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px); /* Card lift effect */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-card img {
-            width: 100%;
-            border-radius: 8px;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .project-card h2 {
-            font-size: 1.8em;
-            margin-top: 10px;
-        }
-
-        .project-card p {
-            font-size: 1.2em;
-            color: #666;
-        }
-
-        .project-card a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #007acc;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: background-color 0.3s;
-        }
-
-        .project-card a:hover {
-            background-color: #005c99;
-        }
-
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charmentha Guillaume – Projects</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <img src="profile.jpg" alt="Photo of Charmentha Guillaume" class="avatar" />
+      <h1 class="name">Charmentha<br>Guillaume</h1>
+      <p class="subtitle">Computer Science Graduate</p>
 
-    <!-- Projects Page Section -->
-    <section class="projects-page">
-        <h1>My Projects</h1>
-        
-        <div class="projects-container">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <img src="project1.jpg" alt="Project 1">
-                <h2>Project Title 1</h2>
-                <p>This project is a web application I built to demonstrate my skills in HTML, CSS, and JavaScript. It includes dynamic content and features such as interactive forms, responsive design, and a user-friendly interface.</p>
-                <a href="https://linktotheproject.com" target="_blank">View Project</a>
-            </div>
-            
-            <!-- Project 2 -->
-            <div class="project-card">
-                <img src="project2.jpg" alt="Project 2">
-                <h2>Project Title 2</h2>
-                <p>This project involves developing a mobile application using Java and Android Studio. The app allows users to track their fitness progress, set goals, and connect with friends for motivation.</p>
-                <a href="https://linktotheproject.com" target="_blank">View Project</a>
-            </div>
-            
-            <!-- Project 3 -->
-            <div class="project-card">
-                <img src="project3.jpg" alt="Project 3">
-                <h2>Project Title 3</h2>
-                <p>This AI-based project leverages Python and machine learning algorithms to predict stock market trends. It uses historical data to train models and makes predictions based on market patterns.</p>
-                <a href="https://linktotheproject.com" target="_blank">View Project</a>
-            </div>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">About</a>
+        <a class="nav-link active" href="projects.html">Projects</a>
+        <a class="nav-link" href="mailto:charmieguillaume@gmail.com">Contact</a>
+      </nav>
 
-        </div>
-        
-        <!-- Back Button -->
-        <button onclick="window.location.href='index.html'">Back to Home</button>
-        
-        <!-- Resume Button -->
-        <button onclick="window.location.href='resume.html'">View Resume</button>
-    </section>
+      <!-- CONTACTS: labels only (click to call/text/email) -->
+      <div class="contacts">
+        <a class="contact-link" aria-label="Call Charmentha" href="tel:+19148634238">Phone</a>
+        <span>•</span>
+        <a class="contact-link" aria-label="Text Charmentha" href="sms:+19148634238">Text</a>
+        <span>•</span>
+        <a class="contact-link" aria-label="Email Charmentha" href="mailto:charmieguillaume@gmail.com">Email</a>
+        <span>•</span>
+        <a class="contact-link" href="https://github.com/Charmie1225" target="_blank" rel="noopener">GitHub</a>
+        <span>•</span>
+        <a class="contact-link" href="https://www.linkedin.com/in/charmentha-guillaume-76085b222/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </aside>
 
+    <!-- MAIN -->
+    <main class="content">
+      <header class="hero hero-compact">
+        <h2 class="hero-title">Projects</h2>
+        <p class="hero-tag">A small collection of things I’ve built and shipped.</p>
+      </header>
+
+      <section class="cards">
+        <!-- QuickestQuiz (Live + GitHub) -->
+        <article class="card">
+          <div class="card-icon">🎯</div>
+          <h3 class="card-title">QuickestQuiz</h3>
+          <p class="card-desc">
+            Responsive quiz app with multiple categories, scoring, and instant feedback.
+            Built with HTML, CSS, and JavaScript.
+          </p>
+          <div class="tags">
+            <span class="tag">Web App</span><span class="tag">HTML/CSS/JS</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" target="_blank" href="https://quickestquiz.netlify.app/">Live Site</a>
+            <a class="btn btn-ghost"   target="_blank" href="https://github.com/Charmie1225/final-project">GitHub Repo</a>
+          </div>
+        </article>
+
+        <!-- Hope Is Now (Live + GitHub) -->
+        <article class="card">
+          <div class="card-icon">❤️</div>
+          <h3 class="card-title">Hope Is Now</h3>
+          <p class="card-desc">
+            Nonprofit site with mission, projects, and donation options (PayPal, Cash App, Zelle).
+            Designed for clarity and trust.
+          </p>
+          <div class="tags">
+            <span class="tag">Web App</span><span class="tag">Nonprofit</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" target="_blank" href="https://hopeisnow.netlify.app/">Live Site</a>
+            <a class="btn btn-ghost"   target="_blank" href="https://github.com/Charmie1225/Charity-Website">GitHub Repo</a>
+          </div>
+        </article>
+
+        <!-- Project Eliza (GitHub only) -->
+        <article class="card">
+          <div class="card-icon">🤖</div>
+          <h3 class="card-title">Project Eliza</h3>
+          <p class="card-desc">
+            Java chatbot that handles questions, statements, and exclamations with
+            simple NLP-style string logic and randomized replies.
+          </p>
+          <div class="tags">
+            <span class="tag">AI</span><span class="tag">Java</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-ghost" target="_blank" href="https://github.com/Charmie1225/ProjectEliza">GitHub Repo</a>
+          </div>
+        </article>
+
+        <!-- NYC Job Listings (GitHub only) -->
+        <article class="card">
+          <div class="card-icon">📱</div>
+          <h3 class="card-title">NYC Job Listings App</h3>
+          <p class="card-desc">
+            Android app with Kotlin + Jetpack Compose that pulls live postings from NYC Open Data.
+            Search, favorites, infinite scroll, and M3 UI.
+          </p>
+          <div class="tags">
+            <span class="tag">Android</span><span class="tag">Kotlin</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-ghost" target="_blank" href="https://github.com/Charmie1225/NYCDataApp">GitHub Repo</a>
+          </div>
+        </article>
+
+        <!-- Artwork App (GitHub only) -->
+        <article class="card">
+          <div class="card-icon">🖼️</div>
+          <h3 class="card-title">Artwork App</h3>
+          <p class="card-desc">
+            Jetpack Compose app that showcases artwork with artist details and
+            a clean, responsive layout.
+          </p>
+          <div class="tags">
+            <span class="tag">Android</span><span class="tag">Kotlin</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-ghost" target="_blank" href="https://github.com/Charmie1225/ArtworkApp">GitHub Repo</a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
