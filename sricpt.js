@@ -1,4 +1,4 @@
-// Highlight active nav based on current page
+
 (function () {
   const path = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-link").forEach(a => {
@@ -9,7 +9,7 @@
   });
 })();
 
-// Simple fade-in on load for hero/panels/cards
+
 document.addEventListener("DOMContentLoaded", () => {
   const fadeTargets = document.querySelectorAll(".hero, .panel, .card");
   fadeTargets.forEach(el => {
@@ -22,3 +22,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
